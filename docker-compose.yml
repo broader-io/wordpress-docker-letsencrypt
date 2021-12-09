@@ -11,6 +11,8 @@ services:
       WORDPRESS_DB_PASSWORD: examplepass
       WORDPRESS_DB_NAME: exampledb
       VIRTUAL_HOST: ${WORDPRESS_VIRTUAL_HOST}
+      LETSENCRYPT_HOST: ${WORDPRESS_VIRTUAL_HOST}
+      LETSENCRYPT_EMAIL: ${LETSENCRYPT_EMAIL}
     volumes:
       - wordpress:/var/www/html
       - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
